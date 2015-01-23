@@ -5,13 +5,13 @@ Devise.setup do |config|
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
   # config.secret_key = '1bcede2c61d53093d37f49a7dfc16cafb92fea7ddb6971032af0ba38894aeca88faa566f6ca3e166a4919a5622bfac8259631c69db45fe37fe676ca22a01a393'
-config.secret_key = '7ecec374e2381ebd0b8b206b32086ad1a525c8a71afe23fadde79b4112602384e442a0eed77d38b6240cb24c8916d72c57ecd21fd6b3e783c733e8dd7178a55f'
+# config.secret_key = '7ecec374e2381ebd0b8b206b32086ad1a525c8a71afe23fadde79b4112602384e442a0eed77d38b6240cb24c8916d72c57ecd21fd6b3e783c733e8dd7178a55f'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'jagisha@yopmail.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -31,7 +31,7 @@ config.secret_key = '7ecec374e2381ebd0b8b206b32086ad1a525c8a71afe23fadde79b41126
   # You can also supply a hash where the value is a boolean determining whether
   # or not authentication should be aborted when the value is not present.
   config.authentication_keys = [ :username]
-
+ 
   # Configure parameters from the request object used for authentication. Each entry
   # given should be a request method and it will automatically be passed to the
   # find_for_authentication method and considered in your model lookup. For instance,
@@ -97,6 +97,10 @@ config.secret_key = '7ecec374e2381ebd0b8b206b32086ad1a525c8a71afe23fadde79b41126
   # a value of 20 is already extremely slow: approx. 60 seconds for 1 calculation).
   config.stretches = Rails.env.test? ? 1 : 10
 
+
+# config.allow_insecure_token_lookup = true
+
+
   # Setup a pepper to generate the encrypted password.
   # config.pepper = 'c35f3be338dfcb61a9964af58732e20478bc84937cfe382cafc4ab1a3f072b989c3918ececf99c8d5c4fcf258fd141a59e78c7b42abff13a0f47219acfbbdfff'
 
@@ -131,7 +135,7 @@ config.secret_key = '7ecec374e2381ebd0b8b206b32086ad1a525c8a71afe23fadde79b41126
 
   # Invalidates all the remember me tokens when the user signs out.
   config.expire_all_remember_me_on_sign_out = true
-
+# config.sign_out_via = :delete
   # If true, extends the user's remember period when remembered via cookie.
   # config.extend_remember_period = false
 
@@ -228,8 +232,8 @@ config.secret_key = '7ecec374e2381ebd0b8b206b32086ad1a525c8a71afe23fadde79b41126
   # config.navigational_formats = ['*/*', :html]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
-  config.sign_out_via = :delete
-
+  config.sign_out_via = :get
+config.mailer_sender = 'jagisha@yopmail.com'
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
